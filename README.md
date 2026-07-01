@@ -1,3 +1,15 @@
+---
+title: Chatbot FAQ UNIVALI
+emoji: 🎓
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+sdk_version: 1.40.1
+app_file: app/streamlit_app.py
+python_version: "3.12"
+pinned: false
+---
+
 # Chatbot FAQ — UNIVALI
 
 Implementação do artigo **_Building and Evaluating a Chatbot Using a University FAQs Dataset_** (Salloum, Shalan, Basiouni, Salloum & Alfaisal, 2024 — CCIS 2162, Springer), adaptada para a **UNIVALI** e em **português (PT-BR)**.

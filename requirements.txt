@@ -5,6 +5,8 @@ nltk==3.9.1
 
 # Pré-processamento PT-BR (lematização — substitui o WordNet, que é só inglês)
 spacy==3.8.2
+# Modelo PT-BR do spaCy (instalado direto pelo wheel — necessário no deploy)
+https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.8.0/pt_core_news_sm-3.8.0-py3-none-any.whl
 
 # Avaliação e gráficos (matriz de confusão, ROC — Figs. 1-4 do artigo)
 scikit-learn==1.5.2

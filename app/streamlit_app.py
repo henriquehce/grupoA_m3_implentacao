@@ -19,9 +19,18 @@ from chatbot import ChatBot
 
 st.set_page_config(page_title="Chatbot UNIVALI", page_icon="🎓", layout="centered")
 
+MODELS = ROOT / "models"
+
 
 @st.cache_resource(show_spinner="Carregando modelo...")
 def carregar_bot() -> ChatBot:
+    # No deploy (ex.: Hugging Face Spaces) o modelo treinado nao vai no repo;
+    # se estiver ausente, treina na primeira execucao (~15s) e cacheia.
+    if not (MODELS / "model_bow.keras").exists() or not (MODELS / "bow_artifacts.pkl").exists():
+        import train_bow
+
+        with st.spinner("Treinando o modelo pela primeira vez (~15s)..."):
+            train_bow.main()
     return ChatBot()
 
 
