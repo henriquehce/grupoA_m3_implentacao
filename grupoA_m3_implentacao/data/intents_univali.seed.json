@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "descricao": "Dataset de intencoes (FAQ) adaptado para a UNIVALI - Universidade do Vale do Itajai. Estrutura inspirada no dataset 'Chatbot Dataset' (Nirali Vaghani, Kaggle) usado em Salloum et al. (2024).",
+    "idioma": "pt-BR",
+    "aviso": "As 'responses' marcadas com [VERIFICAR] sao provisorias e devem ser confirmadas/atualizadas com os dados oficiais da UNIVALI (scraper + curadoria humana) antes do uso real.",
+    "versao": "0.1-seed"
+  },
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": ["oi", "ola", "bom dia", "boa tarde", "boa noite", "e ai", "tudo bem", "oi tudo bem", "ola, pode me ajudar", "hey"],
+      "responses": ["Ola! Sou o assistente virtual da UNIVALI. Como posso te ajudar?", "Oi! Em que posso ajudar voce hoje?", "Ola! Bem-vindo(a) a UNIVALI. Qual e a sua duvida?"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["tchau", "ate logo", "ate mais", "falou", "obrigado tchau", "ate breve", "vou sair", "encerrar"],
+      "responses": ["Ate logo! Qualquer duvida, estou por aqui.", "Tchau! Bons estudos.", "Ate mais! Foi um prazer ajudar."]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": ["obrigado", "obrigada", "valeu", "muito obrigado", "agradeco", "show, valeu", "perfeito obrigado"],
+      "responses": ["De nada! Precisando, e so chamar.", "Por nada! Fico feliz em ajudar.", "Disponha! Estou aqui para o que precisar."]
+    },
+    {
+      "tag": "cursos",
+      "patterns": ["quais cursos a univali oferece", "lista de cursos", "cursos disponiveis", "que cursos tem", "cursos de graduacao", "quero saber os cursos", "areas de estudo", "cursos oferecidos"],
+      "responses": ["[VERIFICAR] A UNIVALI oferece cursos de graduacao em diversas areas (Saude, Direito, Engenharias, Tecnologia, Gestao, Comunicacao, entre outras). Veja a lista completa e atualizada em: https://www.univali.br/graduacao"]
+    },
+    {
+      "tag": "mensalidade_valores",
+      "patterns": ["qual o valor da mensalidade", "quanto custa o curso", "valores", "preco da mensalidade", "quanto e a faculdade", "valor do semestre", "informacao sobre valores"],
+      "responses": ["[VERIFICAR] Os valores de mensalidade variam por curso e campus. Consulte os valores atualizados na pagina do curso desejado em https://www.univali.br ou fale com a Central de Relacionamento."]
+    },
+    {
+      "tag": "bolsas_financiamento",
+      "patterns": ["tem bolsa de estudo", "como conseguir bolsa", "prouni", "fies", "financiamento estudantil", "desconto na mensalidade", "bolsa univali", "programas de bolsa"],
+      "responses": ["[VERIFICAR] A UNIVALI possui programas de bolsas e financiamento (como FIES, ProUni e bolsas proprias). Saiba mais e verifique requisitos em https://www.univali.br/bolsas ou na Central de Relacionamento."]
+    },
+    {
+      "tag": "processo_seletivo",
+      "patterns": ["como entrar na univali", "vestibular", "processo seletivo", "como me inscrever", "inscricao vestibular", "entrar pelo enem", "como faco para ingressar", "datas do vestibular"],
+      "responses": ["[VERIFICAR] Voce pode ingressar na UNIVALI por vestibular, nota do ENEM ou transferencia. Inscricoes e datas em https://www.univali.br/vestibular"]
+    },
+    {
+      "tag": "matricula",
+      "patterns": ["como faco a matricula", "matricula", "documentos para matricula", "renovar matricula", "rematricula", "como me matricular", "prazo de matricula"],
+      "responses": ["[VERIFICAR] A matricula (e a rematricula a cada semestre) e feita pelo portal do aluno. Documentos e prazos: consulte a Secretaria Academica ou https://www.univali.br"]
+    },
+    {
+      "tag": "biblioteca",
+      "patterns": ["biblioteca", "horario da biblioteca", "emprestimo de livros", "como pegar livro emprestado", "acervo", "biblioteca virtual", "renovar livro"],
+      "responses": ["[VERIFICAR] A UNIVALI conta com bibliotecas em seus campi e acervo virtual. Horarios, regras de emprestimo e acesso digital: https://www.univali.br/biblioteca"]
+    },
+    {
+      "tag": "campus_localizacao",
+      "patterns": ["onde fica a univali", "campus", "endereco", "quais sao os campus", "localizacao", "campus de itajai", "campus balneario camboriu", "como chegar"],
+      "responses": ["[VERIFICAR] A UNIVALI possui campi em Itajai, Balneario Camboriu, Tijucas, Biguacu, Sao Jose, Florianopolis (Kobrasol) e Piçarras. Enderecos completos: https://www.univali.br"]
+    },
+    {
+      "tag": "secretaria_documentos",
+      "patterns": ["secretaria academica", "tirar historico", "atestado de matricula", "declaracao de aluno", "como pedir documento", "segunda via de documento", "diploma"],
+      "responses": ["[VERIFICAR] Documentos academicos (historico, atestado de matricula, declaracoes) sao solicitados pela Secretaria Academica via portal do aluno. Mais informacoes: https://www.univali.br"]
+    },
+    {
+      "tag": "contato",
+      "patterns": ["telefone da univali", "como entrar em contato", "email de contato", "central de relacionamento", "falar com atendente", "whatsapp da univali", "fale conosco"],
+      "responses": ["[VERIFICAR] Voce pode falar com a Central de Relacionamento da UNIVALI pelos canais oficiais em https://www.univali.br/contato"]
+    },
+    {
+      "tag": "horario_atendimento",
+      "patterns": ["horario de atendimento", "que horas abre", "horario de funcionamento", "ate que horas atende", "atendimento fim de semana", "funciona sabado"],
+      "responses": ["[VERIFICAR] Os horarios de atendimento variam por setor e campus. Consulte o horario do setor desejado em https://www.univali.br/contato"]
+    },
+    {
+      "tag": "ead",
+      "patterns": ["tem curso a distancia", "ead", "curso online", "graduacao a distancia", "polo ead", "estudar online", "cursos ead"],
+      "responses": ["[VERIFICAR] A UNIVALI oferece cursos na modalidade EAD e semipresencial. Conheca a oferta em https://www.univali.br/ead"]
+    },
+    {
+      "tag": "estagio_carreira",
+      "patterns": ["estagio", "vagas de estagio", "central de estagios", "como conseguir estagio", "oportunidades de carreira", "nucleo de carreiras"],
+      "responses": ["[VERIFICAR] A UNIVALI apoia estagios e empregabilidade por meio de seus nucleos de carreira/estagio. Saiba mais em https://www.univali.br"]
+    },
+    {
+      "tag": "transferencia",
+      "patterns": ["transferencia de faculdade", "quero transferir meu curso", "transferencia externa", "vir de outra faculdade", "aproveitamento de disciplinas"],
+      "responses": ["[VERIFICAR] A UNIVALI aceita transferencia de outras instituicoes, com analise de aproveitamento de disciplinas. Processo e prazos: https://www.univali.br/vestibular"]
+    },
+    {
+      "tag": "pos_graduacao",
+      "patterns": ["pos graduacao", "mestrado", "doutorado", "especializacao", "mba", "cursos de pos", "pos univali"],
+      "responses": ["[VERIFICAR] A UNIVALI oferece pos-graduacao lato sensu (especializacao/MBA) e stricto sensu (mestrado/doutorado). Veja a oferta em https://www.univali.br/pos"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": ["asdfgh", "nao sei o que perguntar", "xpto", "pergunta aleatoria", "blablabla"],
+      "responses": ["Desculpe, ainda nao sei responder isso. Pode reformular? Posso ajudar com cursos, mensalidades, bolsas, vestibular, matricula, biblioteca, campi e contato.", "Nao entendi muito bem. Tente perguntar sobre cursos, valores, bolsas, processo seletivo ou contato da UNIVALI."]
+    }
+  ]
+}

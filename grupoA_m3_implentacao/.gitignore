@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+models/*.keras
+models/*.pkl
+models/figs/
+data/raw/
+data/intents_univali_draft.json
+.streamlit/
