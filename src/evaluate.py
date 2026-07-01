@@ -1,13 +1,12 @@
 """
-Avaliacao dos modelos — reproduz as analises do artigo (Figs. 1-4) e compara
-o modelo fiel (BoW) com o moderno (embeddings).
+Avaliacao do modelo fiel ao artigo (BoW) — reproduz as analises do paper (Figs. 1-4).
 
 Gera, em models/figs/:
   - confusion_matrix_bow.png        (Fig. 1 do artigo)
   - accuracy_loss_bow.png           (Fig. 2 do artigo)
   - roc_bow.png                     (Fig. 4 do artigo)
-  - comparacao_robustez.png         (BoW vs embeddings em parafrases)
-E imprime accuracy / precision / recall / F1 de cada modelo.
+  - robustez_bow.png                (robustez a parafrases)
+E imprime accuracy / precision / recall / F1 do modelo.
 
 Uso:
     python src/evaluate.py
@@ -18,8 +17,6 @@ from __future__ import annotations
 import os
 
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
-os.environ["USE_TF"] = "0"
-os.environ["USE_TORCH"] = "1"
 
 import json
 import pickle
@@ -120,12 +117,9 @@ def evaluate_bow():
     return metrics
 
 
-# Comparacao de UTILIDADE da resposta final.
-# Os dois modelos vivem em espacos de rotulo diferentes (o fiel classifica em
-# ~18 intencoes tematicas genericas; o moderno recupera a FAQ real). Por isso a
-# comparacao justa NAO e por rotulo, e sim: "a resposta entregue contem a
-# informacao esperada?". Cada item: (pergunta_parafraseada, palavra-chave que
-# uma resposta CORRETA deve conter).
+# Teste de ROBUSTEZ a parafrases (perguntas reais reescritas, fora do dataset).
+# Verifica se a resposta entregue contem a informacao esperada. Cada item:
+# (pergunta_parafraseada, palavra-chave que uma resposta CORRETA deve conter).
 TESTE_UTILIDADE = [
     ("de que formas eu posso ingressar na univali", "ingres"),
     ("perdi a senha da intranet, como recupero", "senha"),
@@ -139,41 +133,34 @@ TESTE_UTILIDADE = [
 
 
 def evaluate_utilidade():
-    """Compara a utilidade da resposta final: fiel (BoW) vs moderno (embeddings)."""
+    """Robustez do modelo fiel (BoW) a parafrases fora do dataset."""
     import matplotlib.pyplot as plt
 
     from chatbot import ChatBot
 
-    bot_bow = ChatBot(mode="bow")
-    bot_emb = ChatBot(mode="embeddings")
+    bot = ChatBot()
 
-    acertos = {"bow": 0, "embeddings": 0}
-    print("\n=== TESTE DE UTILIDADE DA RESPOSTA (parafrases) ===")
-    print(f"{'pergunta':52s} {'chave':9s} {'BoW':5s} {'Emb':5s}")
+    acertos = 0
+    print("\n=== TESTE DE ROBUSTEZ A PARAFRASES (BoW) ===")
+    print(f"{'pergunta':52s} {'chave':9s} {'BoW':5s}")
     for q, chave in TESTE_UTILIDADE:
-        rb = bot_bow.answer(q)["resposta"].lower()
-        re_ = bot_emb.answer(q)["resposta"].lower()
-        ok_b = chave in rb
-        ok_e = chave in re_
-        acertos["bow"] += int(ok_b)
-        acertos["embeddings"] += int(ok_e)
-        print(f"{q[:51]:52s} {chave:9s} {'OK' if ok_b else '--':5s} {'OK' if ok_e else '--':5s}")
+        resp = bot.answer(q)["resposta"].lower()
+        ok = chave in resp
+        acertos += int(ok)
+        print(f"{q[:51]:52s} {chave:9s} {'OK' if ok else '--':5s}")
 
     n = len(TESTE_UTILIDADE)
-    pb = acertos["bow"] / n * 100
-    pe = acertos["embeddings"] / n * 100
-    print(f"\nRespostas uteis - Fiel (BoW)        : {acertos['bow']}/{n} ({pb:.0f}%)")
-    print(f"Respostas uteis - Moderno (Embeddings): {acertos['embeddings']}/{n} ({pe:.0f}%)")
+    pct = acertos / n * 100
+    print(f"\nRespostas uteis - Fiel (BoW): {acertos}/{n} ({pct:.0f}%)")
 
-    fig, ax = plt.subplots(figsize=(6, 4))
-    ax.bar(["Fiel (BoW)", "Moderno (Embeddings)"], [pb, pe], color=["#1f6f78", "#2aa198"])
+    fig, ax = plt.subplots(figsize=(5, 4))
+    ax.bar(["Fiel (BoW)"], [pct], color="#1f6f78", width=0.5)
     ax.set_ylabel("% de respostas com a informacao esperada")
-    ax.set_title("Utilidade da resposta a perguntas reais (parafrases)")
+    ax.set_title("Robustez a parafrases (perguntas reais)")
     ax.set_ylim(0, 100)
-    for i, v in enumerate([pb, pe]):
-        ax.text(i, v + 2, f"{v:.0f}%", ha="center")
+    ax.text(0, pct + 2, f"{pct:.0f}%", ha="center")
     fig.tight_layout()
-    fig.savefig(FIGS / "comparacao_utilidade.png", dpi=130)
+    fig.savefig(FIGS / "robustez_bow.png", dpi=130)
     plt.close(fig)
 
 

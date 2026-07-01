@@ -6,21 +6,17 @@ nltk==3.9.1
 # Pré-processamento PT-BR (lematização — substitui o WordNet, que é só inglês)
 spacy==3.8.2
 
-# Modelo moderno (melhoria: embeddings semânticos multilíngues)
-sentence-transformers==3.3.1
-scikit-learn==1.5.2
-
 # Avaliação e gráficos (matriz de confusão, ROC — Figs. 1-4 do artigo)
+scikit-learn==1.5.2
 matplotlib==3.9.2
 seaborn==0.13.2
 
-# Scraper das páginas da UNIVALI
-requests==2.32.3
-beautifulsoup4==4.12.3
-lxml==5.3.0
-# Renderiza páginas que carregam conteúdo via JavaScript (SharePoint/SPA).
-# Após instalar, rode: python -m playwright install chromium
-playwright==1.49.0
-
 # Interface web de chat
 streamlit==1.40.1
+
+# --- Opcional: scraper das páginas da UNIVALI (só para RE-coletar os dados;
+# os JSONs já vêm prontos em data/). Descomente se for rodar src/scraper/.
+# requests==2.32.3
+# beautifulsoup4==4.12.3
+# lxml==5.3.0
+# playwright==1.49.0   # depois: python -m playwright install chromium

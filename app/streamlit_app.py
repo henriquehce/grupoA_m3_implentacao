@@ -21,8 +21,8 @@ st.set_page_config(page_title="Chatbot UNIVALI", page_icon="🎓", layout="cente
 
 
 @st.cache_resource(show_spinner="Carregando modelo...")
-def carregar_bot(mode: str) -> ChatBot:
-    return ChatBot(mode=mode)
+def carregar_bot() -> ChatBot:
+    return ChatBot()
 
 
 st.title("🎓 Chatbot FAQ — UNIVALI")
@@ -30,11 +30,7 @@ st.caption("Implementacao do artigo *Building and Evaluating a Chatbot Using a U
 
 with st.sidebar:
     st.header("Configuracoes")
-    modo = st.radio(
-        "Modelo",
-        options=["embeddings", "bow"],
-        format_func=lambda m: "Moderno (embeddings)" if m == "embeddings" else "Fiel ao artigo (BoW + TF)",
-    )
+    st.caption("Modelo: **Fiel ao artigo (BoW + TensorFlow)**")
     mostrar_debug = st.checkbox("Mostrar intencao e confianca", value=True)
     if st.button("Limpar conversa"):
         st.session_state.pop("mensagens", None)
@@ -42,7 +38,7 @@ with st.sidebar:
     st.markdown("---")
     st.caption("As respostas marcadas com **[VERIFICAR]** ainda precisam ser confirmadas com dados oficiais da UNIVALI.")
 
-bot = carregar_bot(modo)
+bot = carregar_bot()
 
 if "mensagens" not in st.session_state:
     st.session_state.mensagens = [
