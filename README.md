@@ -122,9 +122,13 @@ Só necessário para reraspar as páginas. Descomente as dependências do scrape
   efeito (AUC = 1,00) reportado no artigo. Isso reflete **overfitting / dataset
   pequeno**, como discutido no slide de limitações, e **não** capacidade real de
   generalização.
-- No teste de robustez (paráfrases de perguntas reais fora do dataset), o modelo
-  acerta parte dos casos; erra quando a pergunta usa vocabulário muito diferente
-  do visto no treino — limitação esperada do bag-of-words.
+- O dataset foi expandido para **36 intenções / ~500 patterns** (paráfrases naturais
+  em PT-BR + tópicos novos com dados oficiais: Certidão de Estudos, app Minha Univali,
+  Atividades Complementares). Isso melhorou a generalização de forma concreta:
+  - Teste de robustez (paráfrases): **62% → 100%**
+  - Perguntas totalmente inéditas (fora dos patterns): **~90%** de acerto de intenção
+- Mais patterns = mais vocabulário e formas de perguntar. Aumentar **épocas** não
+  ajudaria (o modelo já satura em ~100% no treino); o ganho real vem de **mais dados**.
 
 ## Próximos passos
 
