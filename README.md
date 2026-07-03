@@ -129,6 +129,12 @@ Só necessário para reraspar as páginas. Descomente as dependências do scrape
   - Perguntas totalmente inéditas (fora dos patterns): **~90%** de acerto de intenção
 - Mais patterns = mais vocabulário e formas de perguntar. Aumentar **épocas** não
   ajudaria (o modelo já satura em ~100% no treino); o ganho real vem de **mais dados**.
+- **Busca de curso por nome:** além do classificador, quando o usuário digita o nome
+  de um curso (ex.: "medicina", "ciência da computação", "quero fazer psicologia"),
+  o bot responde com os dados reais daquele curso (campus, turno, duração, conceito
+  MEC) a partir de `data/cursos_univali.json`. Nomes parciais/ambíguos ("computação",
+  "engenharia") listam as opções. Feito com alta precisão para não confundir casos
+  como "tenho **direito** ao prouni".
 
 ## Próximos passos
 

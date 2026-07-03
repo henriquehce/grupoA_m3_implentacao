@@ -98,6 +98,33 @@ class ChatBot:
                     return self.cursos[key]
         return None
 
+    def _match_cursos_parcial(self, text: str) -> list[dict]:
+        """Nome parcial: 'computacao' -> cursos cujo nome contem esse termo.
+
+        Ex.: 'computacao' casa com 'Ciencia da Computacao' e 'Engenharia de
+        Computacao'; 'engenharia' casa com todas as engenharias. Exige que o
+        nucleo (texto sem palavras de contexto) apareca como termo no nome.
+        """
+        t = _norm(text)
+        core_tokens = [w for w in re.findall(r"[a-z0-9]+", t) if w not in _CURSO_CUE]
+        core = " ".join(core_tokens)
+        if not core or len(core) < 4 or len(core_tokens) > 3:
+            return []
+        vistos: set[str] = set()
+        matches: list[dict] = []
+        for k in self._curso_keys:
+            if re.search(r"\b" + re.escape(core) + r"\b", k) and k not in vistos:
+                vistos.add(k)
+                matches.append(self.cursos[k])
+        return matches
+
+    def _resposta_lista_cursos(self, cursos: list[dict], termo: str) -> str:
+        nomes = ", ".join(c["nome"] for c in cursos)
+        return (
+            f"Encontrei mais de um curso relacionado a \"{termo}\": {nomes}. "
+            "Sobre qual voce quer saber? Lista completa: https://portal.univali.br/graduacao."
+        )
+
     def _resposta_curso(self, curso: dict) -> str:
         entries = curso["entries"]
         nome = curso["nome"]
@@ -152,6 +179,25 @@ class ChatBot:
                 "intent": "curso_especifico",
                 "confianca": round(conf, 3),
                 "resposta": self._resposta_curso(curso),
+            }
+
+        # Nome parcial (ex.: "computacao", "engenharia"): 1 curso -> resposta
+        # direta; varios -> lista para o usuario escolher.
+        parciais = self._match_cursos_parcial(text)
+        if len(parciais) == 1:
+            return {
+                "intent": "curso_especifico",
+                "confianca": round(conf, 3),
+                "resposta": self._resposta_curso(parciais[0]),
+            }
+        if len(parciais) >= 2:
+            termo = " ".join(
+                w for w in re.findall(r"[a-z0-9]+", _norm(text)) if w not in _CURSO_CUE
+            )
+            return {
+                "intent": "cursos_relacionados",
+                "confianca": round(conf, 3),
+                "resposta": self._resposta_lista_cursos(parciais, termo),
             }
 
         if conf < self.threshold:
