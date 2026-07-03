@@ -778,5 +778,83 @@
     "nota_enade": "",
     "objetivo": "O objetivo do Curso de Graduação em Terapia Ocupacional é formar profissionais, Terapeutas Ocupacionais, que conheçam a problemática específica da população com a qual trabalhará, bem como, os fatores sociais, econômicos, culturais e políticos da vida do país, atendendo o sistema de saúde vigente no país, a atenção integral da saúde no sistema regionalizado e hierarquizado de referência e contra-r",
     "url": "https://portal.univali.br/graduacao/terapia-ocupacional-ecs-itajai-bacharelado"
+  },
+  {
+    "curso": "Educação Física",
+    "grau": "Bacharelado e Licenciatura",
+    "campus": "Professor Edison Villela (Itajaí)",
+    "modalidade": "Presencial",
+    "turno": "",
+    "duracao": "",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://portal.univali.br/graduacao/educacao-fisica-ecs-itajai-bacharelado"
+  },
+  {
+    "curso": "Administração",
+    "grau": "Bacharelado",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "A distância",
+    "duracao": "8 semestres",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao"
+  },
+  {
+    "curso": "Análise e Desenvolvimento de Sistemas",
+    "grau": "Tecnólogo",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "A distância",
+    "duracao": "5 semestres",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao"
+  },
+  {
+    "curso": "Ciências Contábeis",
+    "grau": "Bacharelado",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "A distância",
+    "duracao": "8 semestres",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao"
+  },
+  {
+    "curso": "Comércio Exterior",
+    "grau": "Tecnólogo",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "A distância",
+    "duracao": "4 semestres",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao"
+  },
+  {
+    "curso": "Design de Interiores",
+    "grau": "Tecnólogo",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "A distância",
+    "duracao": "4 semestres",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao"
   }
 ]

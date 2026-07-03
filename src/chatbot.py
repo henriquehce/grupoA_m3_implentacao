@@ -134,7 +134,8 @@ class ChatBot:
         nome = curso["nome"]
         e0 = entries[0]
         grau = self._campo(e0, "grau")
-        modalidade = self._campo(e0, "modalidade")
+        modalidades = sorted({self._campo(e, "modalidade") for e in entries if self._campo(e, "modalidade")})
+        modalidade = " / ".join(modalidades)
         campi = sorted({self._campo(e, "campus") for e in entries if self._campo(e, "campus")})
         # turnos podem vir combinados no proprio dado ("Matutino / Noturno");
         # separa e deduplica para nao repetir ("Noturno/Noturno").
