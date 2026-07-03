@@ -2,7 +2,7 @@
   "_meta": {
     "descricao": "Intencoes tematicas da UNIVALI (modelo fiel/BoW). Patterns naturais (PT-BR) curados + respostas de topico com dados oficiais.",
     "idioma": "pt-BR",
-    "versao": "2.0-expandido"
+    "versao": "3.0-keywords"
   },
   "intents": [
     {
@@ -62,7 +62,8 @@
         "opa",
         "ola bot",
         "oi, preciso de ajuda",
-        "salve"
+        "salve",
+        "eai"
       ],
       "responses": [
         "Ola! Sou o assistente virtual da UNIVALI. Como posso te ajudar?",
@@ -109,7 +110,12 @@
         "como recebo o auxilio permanencia",
         "qual a duracao do auxilio permanencia",
         "quando o auxilio pode ser cancelado",
-        "auxilio para se manter na universidade"
+        "auxilio para se manter na universidade",
+        "auxilio",
+        "auxilio permanencia",
+        "permanencia",
+        "ajuda de custo",
+        "auxilio estudantil"
       ],
       "responses": [
         "O Auxilio Permanencia e um beneficio da UNIVALI para estudantes bolsistas que atendam aos criterios (CadUnico, renda por integrante, frequencia minima, entre outros). Detalhes e solicitacao do beneficio: https://portal.univali.br/auxilio-permanencia."
@@ -133,7 +139,14 @@
         "financiamento estudantil univali",
         "bolsa de estudo integral ou parcial",
         "como reduzir o valor da mensalidade",
-        "tem alguma bolsa que eu possa concorrer"
+        "tem alguma bolsa que eu possa concorrer",
+        "bolsa",
+        "bolsas",
+        "desconto",
+        "descontos",
+        "financiamento",
+        "financiar",
+        "bolsa de estudo"
       ],
       "responses": [
         "A UNIVALI possui programas de bolsas e financiamento (Universidade Gratuita, ProUni, UNIEDU, FIES e bolsas proprias). Veja opcoes e requisitos em https://portal.univali.br/bolsas. Atendimento de bolsas: (47) 3341-7873 / bolsas@univali.br."
@@ -156,7 +169,13 @@
         "datas do semestre",
         "quando volta as aulas",
         "cronograma academico",
-        "quando acaba o semestre"
+        "quando acaba o semestre",
+        "calendario",
+        "aulas",
+        "semestre",
+        "volta as aulas",
+        "recesso",
+        "feriado"
       ],
       "responses": [
         "O Calendario Academico (inicio e fim das aulas, matriculas, recessos e feriados) esta em https://www.univali.br/calendario, no Portal do Aluno e no app Minha Univali. As aulas do 1o semestre de 2026 comecam em 26 de fevereiro. Atendimento ao estudante: (47) 3341-7814."
@@ -181,7 +200,16 @@
         "quero falar com alguem",
         "canal de atendimento",
         "telefone do 0800",
-        "como falo com a universidade"
+        "como falo com a universidade",
+        "contato",
+        "telefone",
+        "fone",
+        "email",
+        "whatsapp",
+        "zap",
+        "0800",
+        "falar com atendente",
+        "atendimento"
       ],
       "responses": [
         "Fale com a UNIVALI: Central de Relacionamento 0800 723 1300 / falecom@univali.br, WhatsApp/telefone +55 47 9130-0269, ou em https://portal.univali.br/fale-conosco."
@@ -204,7 +232,12 @@
         "cursos de curta duracao",
         "cursos abertos a comunidade",
         "cursos livres sao online ou presenciais",
-        "onde vejo os cursos livres"
+        "onde vejo os cursos livres",
+        "curso livre",
+        "cursos livres",
+        "curso rapido",
+        "curso de extensao",
+        "curso curto"
       ],
       "responses": [
         "Os Cursos Livres da UNIVALI sao abertos a comunidade e emitem certificado digital com carga horaria. Oferta e inscricoes: https://portal.univali.br/cursos-livres."
@@ -226,7 +259,8 @@
         "como me inscrevo no fies",
         "renda para o fies",
         "fies financiamento faculdade",
-        "posso pagar a faculdade com o fies"
+        "posso pagar a faculdade com o fies",
+        "fies"
       ],
       "responses": [
         "O FIES (Fundo de Financiamento Estudantil, do MEC) financia a graduacao. Requisitos: ter feito o ENEM a partir de 2010 com media >= 450 e nota de redacao > 0, e renda familiar per capita de ate 3 salarios minimos. Contratacao em 3 etapas: inscricao no site do FIES, entrega de documentos no campus em ate 10 dias (com agendamento) e formalizacao no banco. Atendimento de bolsas: (47) 3341-7873 / bolsas@univali.br."
@@ -248,7 +282,10 @@
         "colar grau",
         "quero saber sobre a colacao",
         "formatura online",
-        "posso me formar"
+        "posso me formar",
+        "colacao",
+        "formar",
+        "me formar"
       ],
       "responses": [
         "A UNIVALI oferece 3 tipos de colacao de grau: Oficial/Institucional (organizada pela universidade, sem custo, de 30 a 70 formandos), Especial (a turma contrata empresa e elege comissao, com reserva de data com 1 ano de antecedencia pelo Portal do Aluno) e Online (de 10 a 50 formandos). Para colar grau e preciso ter concluido todas as disciplinas e atividades, estar regular com o ENADE e com a documentacao. Mais: https://www.univali.br/formaturas."
@@ -272,7 +309,24 @@
         "quero fazer uma faculdade na univali",
         "como e o processo seletivo",
         "quero ingressar em um curso",
-        "quero me matricular no colegio de aplicacao"
+        "quero me matricular no colegio de aplicacao",
+        "ingresso",
+        "ingressar",
+        "entrada",
+        "entradas",
+        "entrar",
+        "como entrar",
+        "admissao",
+        "quero entrar",
+        "inscricao",
+        "inscricoes",
+        "processo seletivo",
+        "seletivo",
+        "vestibular",
+        "quero estudar",
+        "quero fazer faculdade",
+        "vagas",
+        "vaga"
       ],
       "responses": [
         "A UNIVALI tem varias formas de ingresso (vestibular, ENEM, vestibular ACAFE, transferencia e Programa Universidade Gratuita). Veja detalhes e inscricoes em https://www.univali.br/vestibular ou fale com a secretaria: +55 47 9130-0269."
@@ -295,7 +349,11 @@
         "intercambio para pos graduacao",
         "quero estudar no exterior pela univali",
         "editais de intercambio",
-        "gastos com intercambio"
+        "gastos com intercambio",
+        "intercambio",
+        "mobilidade",
+        "estudar fora",
+        "estudar no exterior"
       ],
       "responses": [
         "A UNIVALI oferece programas de intercambio nacional e internacional. Editais, requisitos e processos: https://www.univali.br/intercambio ou fale com a secretaria: +55 47 9130-0269."
@@ -315,7 +373,13 @@
         "quero fazer uma denuncia",
         "como envio uma sugestao",
         "canal para reclamacoes",
-        "quero registrar um elogio"
+        "quero registrar um elogio",
+        "reclamacao",
+        "reclamar",
+        "sugestao",
+        "denuncia",
+        "elogio",
+        "critica"
       ],
       "responses": [
         "A Ouvidoria da UNIVALI e o canal para sugestoes, criticas, reclamacoes e elogios. Contato: ouvidoria@univali.br ou https://portal.univali.br/ouvidoria."
@@ -338,7 +402,17 @@
         "problema para entrar no portal",
         "nao consigo logar na intranet",
         "esqueci minha senha do gov br",
-        "como acesso o portal do aluno"
+        "como acesso o portal do aluno",
+        "senha",
+        "esqueci a senha",
+        "esqueci minha senha",
+        "intranet",
+        "portal do aluno",
+        "login",
+        "acesso",
+        "nao consigo entrar",
+        "resetar senha",
+        "recuperar senha"
       ],
       "responses": [
         "Para recuperar a senha da Intranet (Portal do Aluno): acesse www.univali.br/intranet, clique em 'Esqueci Minha Senha' e informe seu login (CPF, e-mail, passaporte ou codigo). Em caso de duvida, fale com a secretaria: +55 47 9130-0269."
@@ -358,7 +432,8 @@
         "como me inscrevo no prouni",
         "requisitos do prouni",
         "prouni precisa de vestibular",
-        "nota do enem para prouni"
+        "nota do enem para prouni",
+        "prouni"
       ],
       "responses": [
         "O ProUni (Programa Universidade para Todos, do MEC) oferece bolsas integrais e parciais. Candidatos ProUni nao precisam prestar vestibular nem estar matriculados previamente. Mais informacoes e atendimento de bolsas: (47) 3341-7873 / bolsas@univali.br."
@@ -380,7 +455,12 @@
         "como faco para reingressar na universidade",
         "voltar para o meu curso",
         "tem bolsa transferencia no reingresso",
-        "quero retomar meus estudos"
+        "quero retomar meus estudos",
+        "reingressar",
+        "voltar a estudar",
+        "retornar",
+        "retomar curso",
+        "voltar pro curso"
       ],
       "responses": [
         "Para retornar/reingressar ao seu curso na UNIVALI, consulte o processo de reingresso: https://portal.univali.br/reingresso ou fale com a secretaria: +55 47 9130-0269."
@@ -399,7 +479,10 @@
         "quero cursar outra faculdade",
         "tenho diploma posso fazer outro curso",
         "desconto para quem ja tem diploma",
-        "fazer uma nova graduacao"
+        "fazer uma nova graduacao",
+        "segundo curso",
+        "outra graduacao",
+        "nova graduacao"
       ],
       "responses": [
         "A Segunda Graduacao e para quem ja tem diploma de ensino superior e quer um novo curso, com incentivo de ate 40% de desconto. Editais e inscricao: https://portal.univali.br/segunda-graduacao ou secretaria: +55 47 9130-0269."
@@ -420,7 +503,13 @@
         "como trancar o semestre",
         "preciso trancar minha matricula",
         "quero pausar meus estudos",
-        "posso parar o curso e voltar depois"
+        "posso parar o curso e voltar depois",
+        "trancar",
+        "trancamento",
+        "trancar matricula",
+        "pausar",
+        "pausar curso",
+        "parar o curso"
       ],
       "responses": [
         "Para trancar a matricula: nos cursos presenciais, solicite pelo Portal do Aluno; nos cursos EAD, contate o Atendimento ao Estudante (0800 729 1756 / WhatsApp (47) 99249-9953), sempre dentro do prazo do calendario academico. Atencao: bolsistas (ex.: UNIEDU) podem ter implicacoes financeiras. Voce pode pedir reingresso em ate 4 anos. Duvidas: secretaria +55 47 9130-0269."
@@ -442,7 +531,11 @@
         "quem pode pedir transferencia",
         "posso transferir com prouni",
         "transferir o fies para a univali",
-        "quero mudar de faculdade para a univali"
+        "quero mudar de faculdade para a univali",
+        "transferencia",
+        "transferir",
+        "vim de outra faculdade",
+        "mudar de faculdade"
       ],
       "responses": [
         "A UNIVALI aceita transferencia externa de outras instituicoes, com analise de aproveitamento de disciplinas: https://portal.univali.br/transferencia-externa ou secretaria: +55 47 9130-0269. Obs.: nao e permitida a transferencia do curso de Medicina cursado no exterior."
@@ -463,7 +556,10 @@
         "trocar de campus dentro da univali",
         "quero mudar de curso mas continuar na univali",
         "como mudo de turno",
-        "trocar de curso sem sair da univali"
+        "trocar de curso sem sair da univali",
+        "mudar de curso",
+        "trocar de curso",
+        "mudar de turno"
       ],
       "responses": [
         "A Transferencia Interna permite mudar de curso, campus ou turno dentro da UNIVALI, conforme edital (geralmente em maio e outubro). Solicite em https://www.univali.br/transferencias, anexando os documentos no prazo; o aproveitamento de disciplinas e feito pelo coordenador do curso pretendido. Duvidas: WhatsApp +55 47 9130-0269 / falecom@univali.br."
@@ -486,7 +582,12 @@
         "renda familiar para o uniedu",
         "documentos para o uniedu",
         "onde posto os documentos do uniedu",
-        "bolsa do governo de sc uniedu"
+        "bolsa do governo de sc uniedu",
+        "uniedu",
+        "art 170",
+        "art 171",
+        "artigo 170",
+        "bolsa do estado"
       ],
       "responses": [
         "O Programa UNIEDU (Governo de Santa Catarina) oferece bolsas e financiamento estudantil (incluindo o Art. 171). Requisitos, editais e regras de acumulo: https://portal.univali.br/programa-uniedu/perguntas-frequentes. Atendimento: (47) 3341-7873 / bolsas@univali.br."
@@ -508,7 +609,11 @@
         "preciso ter estudado em escola publica para a universidade gratuita",
         "onde me inscrevo na universidade gratuita",
         "universidade gratuita e ead pode",
-        "quanto tempo preciso morar em sc para a universidade gratuita"
+        "quanto tempo preciso morar em sc para a universidade gratuita",
+        "universidade gratuita",
+        "gratuita",
+        "programa universidade gratuita",
+        "bolsa integral"
       ],
       "responses": [
         "O Programa Universidade Gratuita (Governo de SC) oferece bolsas de estudo integrais conforme criterios de renda e grupo familiar. Perguntas frequentes e inscricao: https://portal.univali.br/universidade-gratuita/perguntas-frequentes ou secretaria: +55 47 9130-0269."
@@ -533,7 +638,12 @@
         "tem curso de medicina",
         "tem engenharia",
         "quais cursos de graduacao existem",
-        "quero ver a lista de graduacoes"
+        "quero ver a lista de graduacoes",
+        "curso",
+        "cursos",
+        "graduacao",
+        "graduacoes",
+        "quais cursos"
       ],
       "responses": [
         "A UNIVALI oferece mais de 40 cursos de graduacao, entre eles: Medicina, Odontologia, Enfermagem, Fisioterapia, Psicologia, Direito, Administracao, Ciencias Contabeis, Engenharia Civil, Engenharia de Computacao, Engenharia Mecanica, Engenharia Quimica, Ciencia da Computacao, Inteligencia Artificial, Arquitetura e Urbanismo, Design, Jornalismo, Publicidade e Propaganda, Gastronomia, Educacao Fisica, Pedagogia e Oceanografia. Lista completa e atualizada: https://portal.univali.br/graduacao."
@@ -559,7 +669,12 @@
         "tem como estudar sem ir na faculdade",
         "estudar sem sair de casa",
         "nao quero assistir aula presencial",
-        "da para fazer o curso remoto"
+        "da para fazer o curso remoto",
+        "online",
+        "a distancia",
+        "remoto",
+        "distancia",
+        "semipresencial"
       ],
       "responses": [
         "A UNIVALI oferece cursos EAD e semipresenciais: conteudo disponivel 24h, com encontros presenciais no campus a cada dois meses para as provas. Voce pode cursar em paralelo um EAD e um presencial (de areas diferentes). Saiba mais em https://ead.univali.br ou na Central de Ajuda EAD: https://ead.univali.br/central-de-ajuda."
@@ -582,7 +697,8 @@
         "quero um mba",
         "pos graduacao a distancia",
         "cursos de especializacao",
-        "tem doutorado"
+        "tem doutorado",
+        "pos"
       ],
       "responses": [
         "A UNIVALI oferece pos-graduacao lato sensu (especializacao/MBA) e stricto sensu (mestrado/doutorado). Veja a oferta em https://portal.univali.br/pos ou secretaria: +55 47 9130-0269."
@@ -606,7 +722,13 @@
         "onde ficam os campi",
         "univali fica em qual cidade",
         "tem campus em florianopolis",
-        "endereco da univali em itajai"
+        "endereco da univali em itajai",
+        "campi",
+        "onde fica",
+        "unidade",
+        "unidades",
+        "onde e",
+        "em que cidade"
       ],
       "responses": [
         "A UNIVALI tem campi e unidades em Itajai, Balneario Camboriu, Biguacu, Tijucas, Sao Jose (Kobrasol) e Florianopolis. Enderecos completos: https://portal.univali.br ou fale com a secretaria: +55 47 9130-0269."
@@ -629,7 +751,10 @@
         "onde faco a matricula",
         "preciso renovar minha matricula",
         "matricula de calouro",
-        "como me inscrevo depois de aprovado"
+        "como me inscrevo depois de aprovado",
+        "matriculas",
+        "matricular",
+        "me matricular"
       ],
       "responses": [
         "A matricula e a rematricula (a cada semestre) sao feitas pelo Portal do Aluno. Documentos, prazos e duvidas: fale com a Secretaria Academica pelo telefone +55 47 9130-0269."
@@ -651,7 +776,12 @@
         "como arrumar estagio pela univali",
         "empregabilidade univali",
         "oportunidades de emprego",
-        "quero trabalhar na area"
+        "quero trabalhar na area",
+        "estagios",
+        "carreira",
+        "emprego",
+        "vaga de estagio",
+        "empregabilidade"
       ],
       "responses": [
         "A UNIVALI apoia estagios e empregabilidade por meio de seus nucleos de carreira. Para oportunidades e orientacao, fale com a secretaria: +55 47 9130-0269 ou https://www.univali.br."
@@ -671,7 +801,9 @@
         "a univali abre no sabado",
         "horario da secretaria academica",
         "ate que horas posso ir na secretaria",
-        "que horas fecha"
+        "que horas fecha",
+        "horario",
+        "funcionamento"
       ],
       "responses": [
         "Os horarios de atendimento variam por setor e campus. Para confirmar o horario do setor desejado, fale com a secretaria pelo telefone +55 47 9130-0269 ou em https://portal.univali.br/fale-conosco."
@@ -693,7 +825,10 @@
         "tem biblioteca digital",
         "como renovo o emprestimo",
         "onde fica a biblioteca",
-        "posso pegar livro emprestado"
+        "posso pegar livro emprestado",
+        "livro",
+        "livros",
+        "emprestimo"
       ],
       "responses": [
         "A UNIVALI conta com bibliotecas em seus campi e acervo virtual (emprestimo, renovacao e bases digitais). Informacoes e acesso: https://www.univali.br/biblioteca ou secretaria: +55 47 9130-0269."
@@ -716,7 +851,15 @@
         "quanto e a mensalidade",
         "quanto pago por mes",
         "qual o custo do curso",
-        "quanto sai o curso"
+        "quanto sai o curso",
+        "mensalidade",
+        "valor",
+        "preco",
+        "precos",
+        "quanto custa",
+        "custo",
+        "quanto e",
+        "quanto pago"
       ],
       "responses": [
         "Os valores de mensalidade variam por curso e campus. Consulte o valor na pagina do curso desejado em https://portal.univali.br/graduacao ou fale com a secretaria: +55 47 9130-0269."
@@ -739,7 +882,14 @@
         "segunda via do diploma",
         "como emito uma declaracao",
         "documentos academicos",
-        "preciso de um comprovante de matricula"
+        "preciso de um comprovante de matricula",
+        "historico",
+        "declaracao",
+        "atestado",
+        "documento",
+        "documentos",
+        "comprovante de matricula",
+        "segunda via"
       ],
       "responses": [
         "Documentos academicos (historico, atestado de matricula, declaracoes) sao solicitados a Secretaria Academica pelo Portal do Aluno ou pelo telefone +55 47 9130-0269."
@@ -758,7 +908,10 @@
         "certidao de estudos interna ou externa",
         "certidao de estudos como forma de ingresso",
         "quero pegar minha certidao de estudos",
-        "certidao de estudos para transferencia"
+        "certidao de estudos para transferencia",
+        "certidao",
+        "certidao de estudos",
+        "certidao de estudo"
       ],
       "responses": [
         "A Certidao de Estudos e uma forma de ingresso/transferencia na UNIVALI (interna ou externa) com desconto de 50%, com aproveitamento de disciplinas ja cursadas. Detalhes e inscricao: https://portal.univali.br/formas-de-ingresso ou secretaria: +55 47 9130-0269."
@@ -779,7 +932,16 @@
         "onde vejo meu boletim",
         "app minha univali",
         "como pago a mensalidade pelo app",
-        "consultar notas e frequencia"
+        "consultar notas e frequencia",
+        "app",
+        "aplicativo",
+        "minha univali",
+        "notas",
+        "faltas",
+        "boletim",
+        "app do aluno",
+        "ver notas",
+        "consultar notas"
       ],
       "responses": [
         "O app Minha Univali permite ver notas e frequencia, calendario de aulas, pagar mensalidades e negociar titulos, alem de receber notificacoes de novas notas. Disponivel para Android e iOS (busque por 'Minha Univali' na loja). Duvidas: +55 47 9130-0269."
@@ -798,7 +960,10 @@
         "como comprovo atividades complementares",
         "cadastro de atividade complementar",
         "quantas horas complementares preciso",
-        "como importo uma atividade complementar"
+        "como importo uma atividade complementar",
+        "atividade complementar",
+        "lancar horas",
+        "comprovar horas"
       ],
       "responses": [
         "As Atividades Complementares sao registradas pelo Portal do Aluno (opcao 'Cadastro Atividade'): siga o tutorial e leve os comprovantes a Secretaria Academica para validacao. Atividades feitas na propria UNIVALI podem ser adicionadas via 'Importar Atividade'. Mais: https://servicos.univali.br/vidaacademica/atividades-complementares.html"

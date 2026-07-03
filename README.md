@@ -122,11 +122,16 @@ Só necessário para reraspar as páginas. Descomente as dependências do scrape
   efeito (AUC = 1,00) reportado no artigo. Isso reflete **overfitting / dataset
   pequeno**, como discutido no slide de limitações, e **não** capacidade real de
   generalização.
-- O dataset foi expandido para **36 intenções / ~500 patterns** (paráfrases naturais
-  em PT-BR + tópicos novos com dados oficiais: Certidão de Estudos, app Minha Univali,
-  Atividades Complementares). Isso melhorou a generalização de forma concreta:
+- O dataset foi expandido para **36 intenções / ~670 patterns** (paráfrases naturais
+  em PT-BR, **palavras-chave/sinônimos curtos** e tópicos novos com dados oficiais:
+  Certidão de Estudos, app Minha Univali, Atividades Complementares). Isso melhorou a
+  generalização de forma concreta:
   - Teste de robustez (paráfrases): **62% → 100%**
   - Perguntas totalmente inéditas (fora dos patterns): **~90%** de acerto de intenção
+  - **Palavras soltas** ("ingresso", "bolsa", "senha", "estágio"): **100%** — ninguém
+    digita frase inteira, então cada intenção tem também seus termos-chave.
+- **Guard de vetor-vazio:** se a frase não tem nenhuma palavra conhecida do vocabulário,
+  o bot assume fallback honesto (confiança 0.0) em vez de "chutar" com falsa confiança.
 - Mais patterns = mais vocabulário e formas de perguntar. Aumentar **épocas** não
   ajudaria (o modelo já satura em ~100% no treino); o ganho real vem de **mais dados**.
 - **Busca de curso por nome:** além do classificador, quando o usuário digita o nome

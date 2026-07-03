@@ -185,7 +185,12 @@ class ChatBot:
 
     # --- predicao da intencao -------------------------------------------------
     def predict_intent(self, text: str) -> tuple[str, float]:
-        vec = np.array([bag_of_words(text, self.words)], dtype="float32")
+        bow = bag_of_words(text, self.words)
+        # Nenhuma palavra conhecida -> vetor todo-zero. O modelo cospe um rotulo
+        # com falsa confianca; melhor admitir que nao ha sinal (fallback).
+        if sum(bow) == 0:
+            return "fallback", 0.0
+        vec = np.array([bow], dtype="float32")
         probs = self.model.predict(vec, verbose=0)[0]
         i = int(np.argmax(probs))
         return self.classes[i], float(probs[i])
