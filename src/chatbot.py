@@ -125,12 +125,17 @@ class ChatBot:
             "Sobre qual voce quer saber? Lista completa: https://portal.univali.br/graduacao."
         )
 
+    @staticmethod
+    def _campo(e: dict, k: str) -> str:
+        return (e.get(k) or "").strip()
+
     def _resposta_curso(self, curso: dict) -> str:
         entries = curso["entries"]
         nome = curso["nome"]
         e0 = entries[0]
-        grau = (e0.get("grau") or "").strip()
-        campi = sorted({(e.get("campus") or "").strip() for e in entries if e.get("campus")})
+        grau = self._campo(e0, "grau")
+        modalidade = self._campo(e0, "modalidade")
+        campi = sorted({self._campo(e, "campus") for e in entries if self._campo(e, "campus")})
         # turnos podem vir combinados no proprio dado ("Matutino / Noturno");
         # separa e deduplica para nao repetir ("Noturno/Noturno").
         turnos_set: set[str] = set()
@@ -140,25 +145,43 @@ class ChatBot:
                 if parte:
                     turnos_set.add(parte)
         turnos = sorted(turnos_set)
-        dur = (e0.get("duracao") or "").strip()
-        mec = (e0.get("conceito_mec") or "").strip()
+        dur = self._campo(e0, "duracao")
+        ch = self._campo(e0, "carga_horaria")
+        mec = self._campo(e0, "conceito_mec")
+        enade = self._campo(e0, "nota_enade")
+        # objetivo pode estar vazio em e0; pega o primeiro nao-vazio entre campi.
+        obj = next((self._campo(e, "objetivo") for e in entries if self._campo(e, "objetivo")), "")
+        url = self._campo(e0, "url") or "https://portal.univali.br/graduacao"
 
-        txt = f"O curso de {nome}"
-        if grau:
-            txt += f" ({grau})"
+        titulo = f"**{nome}**" + (f" — {grau}" if grau else "")
+        linhas = [titulo]
         if campi:
-            txt += f" e oferecido em: {', '.join(campi)}"
-        det = []
+            linhas.append(f"- 📍 **Campus:** {', '.join(campi)}")
+        detalhe = []
+        if modalidade:
+            detalhe.append(modalidade)
         if turnos:
-            det.append("turno " + "/".join(turnos))  # ex.: Matutino/Noturno
+            detalhe.append("turno " + "/".join(turnos))
         if dur:
-            det.append(f"duracao {dur}")
+            detalhe.append(dur)
+        if ch:
+            detalhe.append(ch)
+        if detalhe:
+            linhas.append("- 🕐 " + " · ".join(detalhe))
+        notas = []
         if mec:
-            det.append(f"conceito MEC {mec}")
-        if det:
-            txt += ". " + "; ".join(det)
-        txt += ". Valores, grade e mais detalhes: https://portal.univali.br/graduacao. Duvidas: +55 47 9130-0269."
-        return txt
+            notas.append(f"Conceito MEC {mec}")
+        if enade:
+            notas.append(f"Nota ENADE {enade}")
+        if notas:
+            linhas.append("- ⭐ " + " · ".join(notas))
+        if obj:
+            if len(obj) > 260:
+                obj = obj[:260].rsplit(" ", 1)[0] + "..."
+            linhas.append(f"- 🎯 {obj}")
+        linhas.append(f"- 🔗 Valores, grade e inscrição: {url}")
+        linhas.append("- ☎️ Dúvidas: +55 47 9130-0269")
+        return "\n".join(linhas)
 
     # --- predicao da intencao -------------------------------------------------
     def predict_intent(self, text: str) -> tuple[str, float]:
