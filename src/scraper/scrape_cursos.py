@@ -136,6 +136,9 @@ def extrair_curso(page, url: str, source: dict) -> dict | None:
 
     if not nome:
         nome = _nome_fallback(page, url, source)
+    # remove o sufixo " EAD" do nome (paginas EAD trazem "Administracao EAD")
+    # para que o curso funda com a versao presencial no chatbot.
+    nome = re.sub(r"\s+EAD\s*$", "", nome or "", flags=re.I).strip()
     campus = dados.get("campus") or source["default_campus"]
     modalidade = dados.get("modalidade") or source["default_modalidade"]
 
