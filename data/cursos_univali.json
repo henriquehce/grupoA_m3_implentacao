@@ -347,7 +347,7 @@
     "carga_horaria": "3720h",
     "conceito_mec": "4",
     "nota_enade": "3",
-    "objetivo": "",
+    "objetivo": "Formar bacharéis em Direito com perfil técnico-jurídico generalista, humanista e ético, para o exercício das diferentes atividades da área jurídica, comprometidos com o ideal de justiça, com o processo de transformação da ordem sociopolítica e os métodos adequados para solução de conflitos, sempre respeitando os preceitos do Estado Democrático de Direito.",
     "url": "https://portal.univali.br/graduacao/direito-ecjs-sao-jose-bacharelado"
   },
   {
@@ -362,6 +362,19 @@
     "nota_enade": "3",
     "objetivo": "",
     "url": "https://portal.univali.br/graduacao/direito-ecjs-tijucas-bacharelado"
+  },
+  {
+    "curso": "Educação Física",
+    "grau": "",
+    "campus": "Professor Edison Villela (Itajaí)",
+    "modalidade": "Presencial",
+    "turno": "Matutino / Noturno",
+    "duracao": "9 semestres",
+    "carga_horaria": "3210h",
+    "conceito_mec": "",
+    "nota_enade": "4",
+    "objetivo": "Formar o graduado em Educação Física para atuar na saúde, no esporte, na cultura, no lazer e na educação, articulando conhecimentos científicos e técnicos, socioculturais, biológicos, psicológicos, instrumentais e tecnológicos com sólida constituição e intervenção profissional nos campos de formação da licenciatura e bacharelado, pautada nos valores éticos e estéticos.",
+    "url": "https://portal.univali.br/graduacao/educacao-fisica-ecs-itajai-licenciatura"
   },
   {
     "curso": "Enfermagem",
@@ -780,81 +793,68 @@
     "url": "https://portal.univali.br/graduacao/terapia-ocupacional-ecs-itajai-bacharelado"
   },
   {
-    "curso": "Educação Física",
-    "grau": "Bacharelado e Licenciatura",
-    "campus": "Professor Edison Villela (Itajaí)",
-    "modalidade": "Presencial",
+    "curso": "Administração EAD",
+    "grau": "Bacharelado",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
     "turno": "",
-    "duracao": "",
+    "duracao": "4 anos",
     "carga_horaria": "",
     "conceito_mec": "",
     "nota_enade": "",
     "objetivo": "",
-    "url": "https://portal.univali.br/graduacao/educacao-fisica-ecs-itajai-bacharelado"
+    "url": "https://ead.univali.br/cursos-graduacao/administracao-ead"
   },
   {
-    "curso": "Administração",
+    "curso": "Análise e Desenvolvimento de Sistemas EAD",
+    "grau": "Tecnólogo",
+    "campus": "EAD (a distância)",
+    "modalidade": "EAD",
+    "turno": "",
+    "duracao": "2,5 anos",
+    "carga_horaria": "",
+    "conceito_mec": "",
+    "nota_enade": "",
+    "objetivo": "",
+    "url": "https://ead.univali.br/cursos-graduacao/analise-e-desenvolvimento-de-sistemas-ead"
+  },
+  {
+    "curso": "Ciências Contábeis EAD",
     "grau": "Bacharelado",
     "campus": "EAD (a distância)",
     "modalidade": "EAD",
-    "turno": "A distância",
-    "duracao": "8 semestres",
+    "turno": "",
+    "duracao": "4 anos",
     "carga_horaria": "",
     "conceito_mec": "",
     "nota_enade": "",
     "objetivo": "",
-    "url": "https://ead.univali.br/cursos-graduacao"
+    "url": "https://ead.univali.br/cursos-graduacao/ciencias-contabeis-ead"
   },
   {
-    "curso": "Análise e Desenvolvimento de Sistemas",
+    "curso": "Comércio Exterior EAD",
     "grau": "Tecnólogo",
     "campus": "EAD (a distância)",
     "modalidade": "EAD",
-    "turno": "A distância",
-    "duracao": "5 semestres",
+    "turno": "",
+    "duracao": "2 anos",
     "carga_horaria": "",
     "conceito_mec": "",
     "nota_enade": "",
     "objetivo": "",
-    "url": "https://ead.univali.br/cursos-graduacao"
+    "url": "https://ead.univali.br/cursos-graduacao/comercio-exterior-ead"
   },
   {
-    "curso": "Ciências Contábeis",
-    "grau": "Bacharelado",
-    "campus": "EAD (a distância)",
-    "modalidade": "EAD",
-    "turno": "A distância",
-    "duracao": "8 semestres",
-    "carga_horaria": "",
-    "conceito_mec": "",
-    "nota_enade": "",
-    "objetivo": "",
-    "url": "https://ead.univali.br/cursos-graduacao"
-  },
-  {
-    "curso": "Comércio Exterior",
+    "curso": "Design de Interiores EAD",
     "grau": "Tecnólogo",
     "campus": "EAD (a distância)",
     "modalidade": "EAD",
-    "turno": "A distância",
-    "duracao": "4 semestres",
+    "turno": "",
+    "duracao": "2 anos",
     "carga_horaria": "",
     "conceito_mec": "",
     "nota_enade": "",
     "objetivo": "",
-    "url": "https://ead.univali.br/cursos-graduacao"
-  },
-  {
-    "curso": "Design de Interiores",
-    "grau": "Tecnólogo",
-    "campus": "EAD (a distância)",
-    "modalidade": "EAD",
-    "turno": "A distância",
-    "duracao": "4 semestres",
-    "carga_horaria": "",
-    "conceito_mec": "",
-    "nota_enade": "",
-    "objetivo": "",
-    "url": "https://ead.univali.br/cursos-graduacao"
+    "url": "https://ead.univali.br/cursos-graduacao/design-de-interiores-ead"
   }
 ]
